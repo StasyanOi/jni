@@ -1,8 +1,10 @@
+import java.nio.file.Paths;
+
 public class Main {
-    static JNIHelloWorld jniHelloWorld = new JNIHelloWorld();
-    ;
+    static JNIHelloWorld jniHelloWorld = new JNIHelloWorld();;
+
     static {
-        System.load("/home/stanislav/IdeaProjects/java/libnative.so");
+        System.load(Paths.get("libnative.so").toAbsolutePath().toString());
     }
 
     public static void main(String[] args) {
